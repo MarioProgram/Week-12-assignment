@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Week12.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container d-grid gap-3">
+        <div class="row mb-5 py-5">
+            <nav class="col">
+                <div class="container-fluid d-flex  justify-content-center">
+                  <p class="fs-1 font">Pokemon Team</p>
+                </div>
+            </nav>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <select class="dropdown-toggle-split rounded-start btn btn-dark" id="selector">                       
+                        <option value='1'>Pokemon 1</option>
+                        <option value='2'>Pokemon 2</option>
+                        <option value="3">Pokemon 3</option>
+                        <option value="4">Pokemon 4</option>
+                        <option value="5">Pokemon 5</option>
+                        <option value="6">Pokemon 6</option>
+                      </select>
+                    <input type="text" class="form-control" id="search" placeholder="Add Pokemon">
+                    <button type="button" class="btn btn-dark" id="sub">Add</button>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center justify-content-between" id="spot1">
+            <div class="col-5 bg-light bg-opacity-50 border border-dark border-2 rounded-2">
+                <div class="row">
+                    <div class="col-md-3 border-end border-dark border-2 p-0">   
+                        <img id="pk1photo" class="img-fluid rounded-start h-75 d-inline-block" src="pics/pokeball-png-45330.png">
+                        <p class="m-0 fs-5 d-flex justify-content-center border-dark border-top border-right" id="pk1name">Pokemon 1</p>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row pb-4">
+                            <div class="row align-items-center border-bottom border-dark m-0 ">
+                                <div class="col-4 border-end border-2 border-dark">
+                                    <p class="fs-3 fw-bolder d-flex justify-content-center align-items-center m-0">Type</p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto test">
+                                    <p class="fs-4 d-flex justify-content-center" id="pk1type-1"></p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk1type-2"></p>
+                                </div>
+                            </div>
+                            <div class="row d-flex align-items-center mt-1 justify-content-center gap-1 mb-1">
+                                <div class="row m-0">
+                                    <div class="col-md-4">
+                                        <p>HP: <span id="pk1hp"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Atk: <span id="pk1atk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Def: <span id="pk1def"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>Sp. Atk: <span id="pk1sAtk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Sp. Def: <span id="pk1sDef"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Speed: <span id="pk1spd"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 bg-light bg-opacity-50 border border-dark border-2 rounded-2">
+                <div class="row">
+                    <div class="col-md-3 border-end border-dark border-2 p-0">   
+                        <img id="pk2photo" class="img-fluid rounded-start h-75 d-inline-block" src="pics/pokeball-png-45330.png">
+                        <p class="m-0 fs-5 d-flex justify-content-center border-dark border-top border-right" id="pk2name">Pokemon 2</p>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row pb-4">
+                            <div class="row align-items-center border-bottom border-dark m-0">
+                                <div class="col-4 border-end border-2 border-dark">
+                                    <p class="fs-3 fw-bolder d-flex justify-content-center align-items-center m-0">Type</p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk2type-1"></p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk2type-2"></p>
+                                </div>
+                            </div>
+                            <div class="row d-flex align-items-center mt-1 justify-content-center gap-1 mb-1">
+                                <div class="row m-0">
+                                    <div class="col-md-4">
+                                        <p>HP: <span id="pk2hp"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Atk: <span id="pk2atk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Def: <span id="pk2def"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>Sp. Atk: <span id="pk2sAtk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Sp. Def: <span id="pk2sDef"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Speed: <span id="pk2spd"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>         
+        <div class="row d-flex justify-content-center justify-content-between" id="spot1">
+            <div class="col-5 bg-light bg-opacity-50 border border-dark border-2 rounded-2">
+                <div class="row">
+                    <div class="col-md-3 border-end border-dark border-2 p-0">   
+                        <img id="pk3photo" class="img-fluid rounded-start h-75 d-inline-block" src="pics/pokeball-png-45330.png">
+                        <p class="m-0 d-flex justify-content-center border-dark border-top" id="pk3name">Pokemon 3</p>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row pb-4">
+                            <div class="row align-items-center border-bottom border-dark m-0">
+                                <div class="col-4 border-end border-2 border-dark">
+                                    <p class="fs-3 fw-bolder d-flex justify-content-center align-items-center m-0">Type</p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk3type-1"></p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk3type-2"></p>
+                                </div>
+                            </div>
+                            <div class="row d-flex align-items-center mt-1 justify-content-center gap-1 mb-1">
+                                <div class="row m-0">
+                                    <div class="col-md-4">
+                                        <p>HP: <span id="pk3hp"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Atk: <span id="pk3atk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Def: <span id="pk3def"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>Sp. Atk: <span id="pk3sAtk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Sp. Def: <span id="pk3sDef"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Speed: <span id="pk3spd"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 bg-light bg-opacity-50 border border-dark border-2 rounded-2">
+                <div class="row">
+                    <div class="col-md-3 border-end border-dark border-2 p-0">   
+                        <img id="pk4photo" class="img-fluid rounded-start h-75 d-inline-block" src="pics/pokeball-png-45330.png">
+                        <p class="m-0 d-flex justify-content-center border-dark border-top" id="pk4name">Pokemon 4</p>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row pb-4">
+                            <div class="row align-items-center border-bottom border-dark m-0">
+                                <div class="col-4 border-end border-2 border-dark">
+                                    <p class="fs-3 fw-bolder d-flex justify-content-center align-items-center m-0">Type</p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk4type-1"></p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk4type-2"></p>
+                                </div>
+                            </div>
+                            <div class="row d-flex align-items-center mt-1 justify-content-center gap-1 mb-1">
+                                <div class="row m-0">
+                                    <div class="col-md-4">
+                                        <p>HP: <span id="pk4hp"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Atk: <span id="pk4atk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Def: <span id="pk4def"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>Sp. Atk: <span id="pk4sAtk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Sp. Def: <span id="pk4sDef"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Speed: <span id="pk4spd"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="row d-flex justify-content-center justify-content-between" id="spot1">
+            <div class="col-5 bg-light bg-opacity-50 border border-dark border-2 rounded-2">
+                <div class="row">
+                    <div class="col-md-3 border-end border-dark border-2 p-0">   
+                        <img id="pk5photo" class="img-fluid rounded-start h-75 d-inline-block" src="pics/pokeball-png-45330.png">
+                        <p class="m-0 d-flex justify-content-center border-dark border-top" id="pk5name">Pokemon 5</p>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row pb-4">
+                            <div class="row align-items-center border-bottom border-dark m-0">
+                                <div class="col-4 border-end border-2 border-dark">
+                                    <p class="fs-3 fw-bolder d-flex justify-content-center align-items-center m-0">Type</p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk5type-1"></p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk5type-2"></p>
+                                </div>
+                            </div>
+                            <div class="row d-flex align-items-center mt-1 justify-content-center gap-1 mb-1">
+                                <div class="row m-0">
+                                    <div class="col-md-4">
+                                        <p>HP: <span id="pk5hp"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Atk: <span id="pk5atk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Def: <span id="pk5def"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>Sp. Atk: <span id="pk5sAtk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Sp. Def: <span id="pk5sDef"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Speed: <span id="pk5spd"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 bg-light bg-opacity-50 border border-dark border-2 rounded-2">
+                <div class="row">
+                    <div class="col-md-3 border-end border-dark border-2 p-0">   
+                        <img id="pk6photo" class="img-fluid rounded-start h-75 d-inline-block" src="pics/pokeball-png-45330.png">
+                        <p class="m-0 d-flex justify-content-center border-dark border-top" id="pk6name">Pokemon 6</p>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row pb-4">
+                            <div class="row align-items-center border-bottom border-dark m-0">
+                                <div class="col-4 border-end border-2 border-dark">
+                                    <p class="fs-3 fw-bolder d-flex justify-content-center align-items-center m-0">Type</p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto d-flex align-items-center">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk6type-1"></p>
+                                </div>
+                                <div class="col-md-4 col-8 me-auto">
+                                    <p class="fs-4 d-flex justify-content-center m-0" id="pk6type-2"></p>
+                                </div>
+                            </div>
+                            <div class="row d-flex align-items-center mt-1 justify-content-center gap-1 mb-1">
+                                <div class="row m-0">
+                                    <div class="col-md-4">
+                                        <p>HP: <span id="pk6hp"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Atk: <span id="pk6atk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Def: <span id="pk6def"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>Sp. Atk: <span id="pk6sAtk"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Sp. Def: <span id="pk6sDef"></span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Speed: <span id="pk6spd"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="Week12.js"></script>
+</body>
+</html>
